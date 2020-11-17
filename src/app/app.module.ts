@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu/menu.component';
 import { MenuitemComponent } from './menuitem/menuitem/menuitem.component';
 import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user-list/user-list/user-list.component';
+import { UserEditComponent } from './user-edit/user-edit/user-edit.component';
 import { UserDetailComponent } from './user-detail/user-detail/user-detail.component';
 
 
@@ -25,6 +26,7 @@ import { UserDetailComponent } from './user-detail/user-detail/user-detail.compo
     MenuitemComponent,
     UserComponent,
     UserListComponent,
+    UserEditComponent,
     UserDetailComponent
     
 

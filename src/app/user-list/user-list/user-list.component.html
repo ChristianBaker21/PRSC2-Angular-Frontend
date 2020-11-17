@@ -22,7 +22,10 @@
         <td>{{user.isReviewer ? "Yes" : "No"}}</td>
         <td>{{user.isAdmin ? "Yes" : "No"}}</td>
         <td>
-             <a routerLink="">Edit</a>
+             <a routerLink="/user/edit/{{user.id}}">Edit</a>
+        </td>
+        <td>
+            <a routerLink="/user/detail/{{user.id}}">detail</a>
         </td>
     </tr>
 </table>
