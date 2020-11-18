@@ -1,0 +1,63 @@
+<router-outlet></router-outlet>
+<h3>Vendor Edit</h3>
+<table *ngIf="vendor" class = "table table-sm">
+<tr>
+    <th>Id</th>
+    <td>
+        <input [(ngModel)]="vendor.id" disabled type="text" size="10">
+    </td>
+</tr>
+<tr>
+    <th>code</th>
+    <td>
+        <input [(ngModel)]="vendor.code" type="text" size="15">
+    </td>
+</tr>
+<tr>
+    <th>name</th>
+    <td>
+        <input [(ngModel)]="vendor.name" type="text" size="15"> 
+    </td>
+    <tr>
+        <th>address</th>
+        <td>
+            <input [(ngModel)]="vendor.address" type="text" size="15">
+        </td>
+    </tr>
+    <tr>
+        <th>city</th>
+        <td>
+            <input [(ngModel)]="vendor.city" type="password" size="10">
+        </td>
+    </tr>
+    <tr>
+        <th>state</th>
+        <td>
+            <input [(ngModel)]="vendor.state" type="text" size="25">
+        </td>
+    </tr>
+<tr>
+    <th>zip</th>
+    <td>
+        <input [(ngModel)]="vendor.zip" type="text" size="15">
+    </td>
+</tr>
+<tr>
+    <th>phone</th>
+    <td>
+        <input [(ngModel)]="vendor.phone" type="text" size="12">
+    </td>
+</tr>
+<tr>
+    <th>email</th>
+    <td>
+        <input [(ngModel)]="vendor.email" type="text" size="12">
+    </td>
+</tr>
+<tr>
+    <td colspan="2">
+        <button (click)="save()" class="btn btn primary">Save</button>
+    </td>
+</tr>   
+</table>
+

@@ -13,6 +13,11 @@ import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user-list/user-list/user-list.component';
 import { UserEditComponent } from './user-edit/user-edit/user-edit.component';
 import { UserDetailComponent } from './user-detail/user-detail/user-detail.component';
+import { UserCreateComponent } from './user-create/user-create/user-create.component';
+//import { SortPipe } from './core/sort.pipe';
+import { VendorComponent } from './vendor/vendor/vendor.component';
+import { VendorListComponent } from './vendor-list/vendor-list/vendor-list.component';
+import { VendorEditComponent } from './vendor-edit/vendor-edit/vendor-edit.component';
 
 
 
@@ -27,7 +32,12 @@ import { UserDetailComponent } from './user-detail/user-detail/user-detail.compo
     UserComponent,
     UserListComponent,
     UserEditComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserCreateComponent,
+    //SortPipe,
+    VendorComponent,
+    VendorListComponent,
+    VendorEditComponent
     
 
   ],

@@ -1,6 +1,6 @@
+<span>User List|</span>
 
-<h1>User List</h1>
-
+<span> <a routerLink="/user/create">Create</a> </span>
 
 <table class="table table-sm">
     <tr>
@@ -11,6 +11,8 @@
         <th>Email</th>
         <th>isReviewer</th>
         <th>isAdmin</th>
+        
+        
     </tr>
     <tr let *ngFor="let user of users">
         <td>{{user.id}}</td>
@@ -27,6 +29,11 @@
         <td>
             <a routerLink="/user/detail/{{user.id}}">detail</a>
         </td>
+         
+        
+        
     </tr>
+    
+    
 </table>
 
