@@ -1,5 +1,4 @@
 export class user {
-    display: string = "";
+    display: string  = "";
     route: string = "";
 }
-
