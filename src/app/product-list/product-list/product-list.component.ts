@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/product/product/product.class';
 import { ProductService } from 'src/app/product/product/product.service';
-
-
-
+import { Product } from 'src/app/product/product/product.class';
 
 @Component({
   selector: 'app-product-list',
@@ -13,6 +10,11 @@ import { ProductService } from 'src/app/product/product/product.service';
 export class ProductListComponent implements OnInit {
 
   products: Product[] = [];
+  pageTitle: string = "Product List";
+  searchCriteria: string = "";
+  sortColumn: string = "name"
+  sortAsc: boolean = true;
+
 
   constructor(
     private prdsvc: ProductService

@@ -5,8 +5,13 @@ import { E404Component } from './core/e404/e404.component';
 import { HomeComponent } from './core/home/home.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { ProductCreateComponent } from './product-create/product-create/product-create.component';
+import { ProductDetailComponent } from './product-detail/product-detail/product-detail.component';
 import { ProductEditComponent } from './product-edit/product-edit/product-edit.component';
 import { ProductListComponent } from './product-list/product-list/product-list.component';
+import { RequestCreateComponent } from './request-create/request-create/request-create.component';
+import { RequestDetailComponent } from './request-detail/request-detail/request-detail.component';
+import { RequestEditComponent } from './request-edit/request-edit/request-edit.component';
+import { RequestListComponent } from './request-list/request-list/request-list.component';
 import { UserCreateComponent } from './user-create/user-create/user-create.component';
 import { UserDetailComponent } from './user-detail/user-detail/user-detail.component';
 import { UserEditComponent } from './user-edit/user-edit/user-edit.component';
@@ -32,9 +37,14 @@ const routes: Routes = [
   {path: "vendor/detail/:id", component: VendorDetailComponent},
   {path: 'user/login', component: UserLoginComponent},
   {path: "vendor/create", component: VendorCreateComponent},
-  {path: "ProductList", component: ProductListComponent},
+  {path: "product/list", component: ProductListComponent},
   {path: "product/edit/:id", component: ProductEditComponent},
   {path: "product/create", component: ProductCreateComponent},
+  {path: "product/detail/:id", component: ProductDetailComponent},
+  {path: "request/list", component: RequestListComponent},
+  {path: "request/create", component: RequestCreateComponent},
+  {path: "request/detail/:id", component: RequestDetailComponent},
+  {path: "request/edit/:id", component: RequestEditComponent},
   {path: "**", component: E404Component}
 ];
 

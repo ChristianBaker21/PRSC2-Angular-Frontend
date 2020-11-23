@@ -1,0 +1,57 @@
+<app-menu></app-menu>
+<router-outlet></router-outlet>
+<h3>Request Detail</h3>
+<table *ngIf="request" class = "table table-sm">
+<tr>
+    <th>Id</th>
+    <td>
+        <input [(ngModel)]="request.id" disabled type="text" size="10">
+    </td>
+</tr>
+<tr>
+    <th>description</th>
+    <td>
+        <input [(ngModel)]="request.description" disabled type="text" size="15">
+    </td>
+</tr>
+<tr>
+    <th>justification</th>
+    <td>
+        <input [(ngModel)]="request.justification" disabled type="text" size="15">
+    </td>
+    <tr>
+        <th>rejectionreason</th>
+        <td>
+            <input [(ngModel)]="request.rejectionreason" disabled type="text" size="15">
+        </td>
+    </tr>
+    <tr>
+        <th>deliverymode</th>
+        <td>
+            <input [(ngModel)]="request.deliverymode" disabled type="text" size="10">
+        </td>
+    </tr>
+    <tr>
+        <th>status</th>
+        <td>
+            <input [(ngModel)]="request.status" disabled type="text" size="25">
+        </td>
+    </tr>
+<tr>
+    <th>total</th>
+    <td>
+        <input [(ngModel)]="request.total" disabled type="text" size="15">
+    </td>
+</tr>
+<tr>
+    <th>userid</th>
+    <td>
+        <input [(ngModel)]="request.userid" disabled type="boolean" size="12">
+    </td>
+</tr>
+<tr>
+        <td colspan="2">
+            <button (click)="back()" class="btn btn primary">Back</button>
+        </td>
+</tr>
+</table>

@@ -4,11 +4,11 @@ import { Product } from 'src/app/product/product/product.class';
 import { ProductService } from 'src/app/product/product/product.service';
 
 @Component({
-  selector: 'app-product-edit',
-  templateUrl: './product-edit.component.html',
-  styleUrls: ['./product-edit.component.css']
+  selector: 'app-product-detail',
+  templateUrl: './product-detail.component.html',
+  styleUrls: ['./product-detail.component.css']
 })
-export class ProductEditComponent implements OnInit {
+export class ProductDetailComponent implements OnInit {
 
   product: Product;
   constructor(private prdsvc: ProductService,
@@ -20,10 +20,10 @@ export class ProductEditComponent implements OnInit {
     console.log(this.product);
     this.prdsvc.change(this.product).subscribe(
       res => {
-        console.debug("Product Change:", res);
+        console.debug("Product Detail:", res);
         this.router.navigateByUrl("product/list");
       },
-      err => {console.error("Error changing  product: ", err); }
+      err => {console.error("Error detailing  product: ", err); }
     );
   }
 
