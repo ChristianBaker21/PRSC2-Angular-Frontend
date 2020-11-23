@@ -1,0 +1,53 @@
+<app-menu></app-menu>
+<router-outlet></router-outlet>
+<h3>Product Edit</h3>
+<table *ngIf= "product" class = "table table-sm">
+<tr>
+    <th>Id</th>
+    <td>
+        <input [(ngModel)]="product.id" disabled type="text" size="10">
+    </td>
+</tr>
+<tr>
+    <th>partnbr</th>
+    <td>
+        <input [(ngModel)]="product.partnbr" type="text" size="15">
+    </td>
+</tr>
+<tr>
+    <th>name</th>
+    <td>
+        <input [(ngModel)]="product.name" type="text" size="15"> 
+    </td>
+    <tr>
+        <th>price</th>
+        <td>
+            <input [(ngModel)]="product.price" type="text" size="15">
+        </td>
+    </tr>
+    <tr>
+        <th>unit</th>
+        <td>
+            <input [(ngModel)]="product.unit" type="text" size="10">
+        </td>
+    </tr>
+    <tr>
+        <th>photopath</th>
+        <td>
+            <input [(ngModel)]="product.photopath" type="text" size="25">
+        </td>
+    </tr>
+<tr>
+    <th>vendorid</th>
+    <td>
+        <input [(ngModel)]="product.vendorid" disabled type="text" size="15">
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2">
+        <button (click)="save()" class="btn btn primary">Save</button>
+    </td>
+</tr>   
+</table>
+

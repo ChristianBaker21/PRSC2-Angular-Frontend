@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <router-outlet></router-outlet>
-<h3>Vendor Edit</h3>
-<table *ngIf="vendor" class = "table table-sm">
+<h3>Vendor Create</h3>
+<table class = "table table-sm">
 <tr>
     <th>Id</th>
     <td>
@@ -17,7 +17,7 @@
 <tr>
     <th>name</th>
     <td>
-        <input [(ngModel)]="vendor.name" type="text" size="15"> 
+        <input [(ngModel)]="vendor.name" type="text" size="15">
     </td>
     <tr>
         <th>address</th>

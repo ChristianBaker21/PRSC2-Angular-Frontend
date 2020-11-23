@@ -20,6 +20,15 @@ import { VendorListComponent } from './vendor-list/vendor-list/vendor-list.compo
 import { VendorEditComponent } from './vendor-edit/vendor-edit/vendor-edit.component';
 import { VendorDetailComponent } from './vendor-detail/vendor-detail/vendor-detail.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
+import { VendorCreateComponent } from './vendor-create/vendor-create/vendor-create.component';
+import { ProductComponent } from './product/product/product.component';
+import { ProductListComponent } from './product-list/product-list/product-list.component';
+import { ProductEditComponent } from './product-edit/product-edit/product-edit.component';
+import { ProductCreateComponent } from './product-create/product-create/product-create.component';
+import { RequestlineCreateComponent } from './requestline-create.component.ts/requestline-create/requestline-create.component';
+import { RequestlineEditComponent } from './requestline-edit/requestline-edit/requestline-edit.component';
+import { RequestlineDeleteComponent } from './requestline-delete/requestline-delete/requestline-delete.component';
+import { RequestlineComponent } from './requestline/requestline/requestline.component';
 
 
 
@@ -41,7 +50,16 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
     VendorListComponent,
     VendorEditComponent,
     VendorDetailComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    VendorCreateComponent,
+    ProductComponent,
+    ProductListComponent,
+    ProductEditComponent,
+    ProductCreateComponent,
+    RequestlineCreateComponent,
+    RequestlineEditComponent,
+    RequestlineDeleteComponent,
+    RequestlineComponent
     
 
   ],

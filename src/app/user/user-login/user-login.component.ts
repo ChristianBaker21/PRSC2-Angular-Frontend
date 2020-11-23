@@ -12,8 +12,8 @@ import { UserService } from '../user.service';
 export class UserLoginComponent implements OnInit {
 
   message: string = "";
-  username: string = "";
-  password: string = ""
+  username: string = "Christian";
+  password: string = "Baker"
   user: User = null;
 
   constructor(private userSvc: UserService,
