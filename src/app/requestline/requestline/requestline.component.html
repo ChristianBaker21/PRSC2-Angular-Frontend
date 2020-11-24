@@ -1,29 +1,29 @@
 <app-menu></app-menu>
 <span>Requestline|</span>
 
-<span> <a routerLink="/product/create">Create</a> </span>
+<span> <a routerLink="/Requestline/create">Create</a> </span>
 
 <table class="table table-sm">
     <tr>
         <th>Id</th>
-        <th>partnbr</th>
-        <th>name</th>
-        <th>price</th>
-        <th>unit</th>
-        <th>photopath</th>
-        <th>vendor</th>
-        <th>action</th>
+        <th>requestid</th>
+        <th>productid</th>
+        <th>quantity</th>
+        
+        
+        
     </tr>
-    <tr let *ngFor="let requestline of requestlines">
+    <tr let *ngFor="let ">
         <td>{{requestline.id}}</td>
         <td>{{requestline.request.id}}</td>
-        <td>{{requestline.product.id}}</td>
-        <td>{{requestline.quantity}}</td>
-        <td>
-            <a routerLink="/product/edit/{{product.id}}">Edit</a> |
-            <a routerLink="/product/detail/{{product.id}}">detail</a>
+        <td>{{requestline.product.id}}
+            {{requestline.quantity}}</td>
+             <a routerLink="/Request/edit/{{.id}}">Edit</a>
         </td>
+         
+        
+        
     </tr>
-
-
+    
+    
 </table>

@@ -34,6 +34,8 @@ import { RequestCreateComponent } from './request-create/request-create/request-
 import { RequestListComponent } from './request-list/request-list/request-list.component';
 import { RequestDetailComponent } from './request-detail/request-detail/request-detail.component';
 import { RequestEditComponent } from './request-edit/request-edit/request-edit.component';
+import { RequestReviewComponent } from './Request-Review/request-review/request-review.component';
+import { Request } from './request/request/request.lines/request.lines.component';
 
 
 
@@ -69,7 +71,9 @@ import { RequestEditComponent } from './request-edit/request-edit/request-edit.c
     RequestCreateComponent,
     RequestListComponent,
     RequestDetailComponent,
-    RequestEditComponent
+    RequestEditComponent,
+    RequestReviewComponent,
+    Request.LinesComponent
     
 
   ],

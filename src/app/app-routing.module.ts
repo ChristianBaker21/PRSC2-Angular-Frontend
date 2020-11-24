@@ -12,6 +12,7 @@ import { RequestCreateComponent } from './request-create/request-create/request-
 import { RequestDetailComponent } from './request-detail/request-detail/request-detail.component';
 import { RequestEditComponent } from './request-edit/request-edit/request-edit.component';
 import { RequestListComponent } from './request-list/request-list/request-list.component';
+import { RequestlineComponent } from './requestline/requestline/requestline.component';
 import { UserCreateComponent } from './user-create/user-create/user-create.component';
 import { UserDetailComponent } from './user-detail/user-detail/user-detail.component';
 import { UserEditComponent } from './user-edit/user-edit/user-edit.component';
@@ -45,6 +46,7 @@ const routes: Routes = [
   {path: "request/create", component: RequestCreateComponent},
   {path: "request/detail/:id", component: RequestDetailComponent},
   {path: "request/edit/:id", component: RequestEditComponent},
+  //{path: "request/lines/:id", component: },
   {path: "**", component: E404Component}
 ];
 
