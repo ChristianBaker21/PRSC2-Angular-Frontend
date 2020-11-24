@@ -40,11 +40,12 @@ saves(): void
 
 save(): void
 {
-console.log(this.product);
+  console.log(this.product);
     this.prodsvc.create(this.product).subscribe(
       res => {
         console.debug("Product Create:", res);
-        this.router.navigateByUrl("product/list");
+        this.router.navigateByUrl("/product/list");
+        this.saved= "Saved!";
       },
       err => {console.error("Error creating request: ", err); }
     )

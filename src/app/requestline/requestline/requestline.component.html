@@ -1,1 +1,29 @@
-<p>requestline works!</p>
+<app-menu></app-menu>
+<span>Requestline|</span>
+
+<span> <a routerLink="/product/create">Create</a> </span>
+
+<table class="table table-sm">
+    <tr>
+        <th>Id</th>
+        <th>partnbr</th>
+        <th>name</th>
+        <th>price</th>
+        <th>unit</th>
+        <th>photopath</th>
+        <th>vendor</th>
+        <th>action</th>
+    </tr>
+    <tr let *ngFor="let requestline of requestlines">
+        <td>{{requestline.id}}</td>
+        <td>{{requestline.request.id}}</td>
+        <td>{{requestline.product.id}}</td>
+        <td>{{requestline.quantity}}</td>
+        <td>
+            <a routerLink="/product/edit/{{product.id}}">Edit</a> |
+            <a routerLink="/product/detail/{{product.id}}">detail</a>
+        </td>
+    </tr>
+
+
+</table>

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Request } from 'src/app/request/request/request.class'
 
 import { RequestService } from 'src/app/request/request/request.service';
+import { SystemService } from 'src/app/system.service';
 
 
 @Component({
@@ -13,23 +14,25 @@ import { RequestService } from 'src/app/request/request/request.service';
 export class RequestCreateComponent implements OnInit {
 
   request: Request= new Request();
-  constructor(private usersvc: RequestService,
+  constructor(private  reqsvc: RequestService,
   private route: ActivatedRoute, 
-  private router: Router
+  private router: Router,
+  private sysserv: SystemService
   ) { }
 
   save(): void{
     console.log(this.request);
-    this.usersvc.create(this.request).subscribe(
+    this.reqsvc.create(this.request).subscribe(
       res => {
         console.debug("Request Create:", res);
-        this.router.navigateByUrl("RequestList");
+        this.router.navigateByUrl("request/list");
       },
       err => {console.error("Error creating request: ", err); }
     );
   }
 
   ngOnInit(): void {
+    this.request.userid=this.sysserv.loggedInUser.id;
    
     
   }

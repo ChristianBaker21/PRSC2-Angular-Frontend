@@ -20,29 +20,17 @@
         <input [(ngModel)]="request.justification" type="text" size="15">
     </td>
     <tr>
-        <th>price</th>
-        <td>
-            <input [(ngModel)]="request.rejectionreason" type="text" size="15">
-        </td>
-    </tr>
-    <tr>
-        <th>unit</th>
+        <th>deliverymode</th>
         <td>
             <input [(ngModel)]="request.deliverymode" type="text" size="10">
         </td>
     </tr>
     <tr>
-        <th>photopath</th>
+        <th>total</th>
         <td>
-            <input [(ngModel)]="request.status" type="text" size="25">
+            <input [(ngModel)]="request.total" type="number" disabled size="25">
         </td>
     </tr>
-<tr>
-    <th>userid</th>
-    <td>
-        <input [(ngModel)]="request.userid" type="number" size="15">
-    </td>
-</tr>
 <tr>
     <td colspan="2">
         <button (click)="save()" class="btn btn primary">Save</button>

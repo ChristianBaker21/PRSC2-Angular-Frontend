@@ -6,7 +6,7 @@ export class Request {
     justification: string = "";
     rejectionreason: string = "";
     deliverymode: string = "";
-    status: string = "";
+    status: string = "NEW";
     total: number = 0;
 
     userid: number = 0;

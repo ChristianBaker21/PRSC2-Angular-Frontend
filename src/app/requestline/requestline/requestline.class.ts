@@ -1,5 +1,5 @@
 import { ɵɵqueryRefresh } from '@angular/core';
-import { Product } from '../product/product/product.class';
+import { Product } from '../../product/product/product.class';
 
 export class Requestline {
     id: number = 0;
@@ -7,7 +7,8 @@ export class Requestline {
     productid: number = 0;
     quantity: number = 1;
 
+    request: Request = null;
     product: Product = null;
-
+    
     constructor () {}
 }
