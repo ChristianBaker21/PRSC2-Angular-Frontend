@@ -5,7 +5,7 @@ import { SyncAsync } from '@angular/compiler/src/util';
 import { Requestline } from './requestline.class'
 import { RequestService } from 'src/app/request/request/request.service';
 
-const baseurl: string = "http://localhost:50455/api/requestlines";
+const baseurl: string = "http://localhost:50455/api/requestline";
 
 @Injectable({
   providedIn: 'root'
@@ -32,7 +32,7 @@ export class RequestLineService {
     
 
     create(requestline: Requestline): Observable<any> {
-      return this.http.post(`{$baseurl}`, requestline) as Observable<any>;
+      return this.http.post(`${baseurl}`, requestline) as Observable<any>;
     }
     
 
