@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RequestService } from 'src/app/request/request/request.service';
-import { Request } from 'src/app/request/request/request.class'
+import { Request } from 'src/app/requestline/requestline/request.class'
 
 @Component({
   selector: 'app-request-detail',

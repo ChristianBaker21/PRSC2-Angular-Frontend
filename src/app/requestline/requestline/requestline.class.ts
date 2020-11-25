@@ -1,5 +1,5 @@
 import { Product } from '../../product/product/product.class';
-import { Request } from '../../request/request/request.class';
+import { Request } from './request.class';
 
 export class Requestline {
     id: number = 0;
@@ -12,4 +12,7 @@ export class Requestline {
 
     constructor () {}
 }
+
+
+
 

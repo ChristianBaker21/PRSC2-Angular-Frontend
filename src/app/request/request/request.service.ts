@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Request } from './request.class';
+import { Request } from '../../requestline/requestline/request.class';
 import { SyncAsync } from '@angular/compiler/src/util';
 
 const baseurl: string = "http://localhost:50455/api/requests";

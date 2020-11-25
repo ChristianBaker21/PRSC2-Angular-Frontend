@@ -4,7 +4,7 @@
 
 <span> <a routerLink="/request/create">Create</a> </span>
 
-<table class="table table-sm" ngIf=request>
+<table class="table" *ngIf=requests>
     <tr>
         <th>Id</th>
         <th>description</th>
@@ -31,12 +31,9 @@
 </table>
 
 <h2>
-    Line Items for Request
+    LineItem Requests
 </h2>
-<button (click)="review()" id="review">Review</button>
-
-<button (click)="LineCreate()">Create Request Line</button>
-<div *ngIf=request>
+<div *ngIf=requests>
     <table class="table" *ngIf=request.requestlines>
         <tr>
             <th> LineItemId </th>
@@ -55,7 +52,7 @@
             <td>{{lineitem.product.price * lineitem.quantity}}</td>
             <td>
                 <button (click)="lineitemEdit(lineitem.id)">Edit</button>
-                <button (click)="Delete Line(lineitem.id)" id={{lineitem.id}}>Delete Line Item</button>
+                <button (click)="DeleteLine(lineitem.id)" id={{lineitem.id}}>Delete Line Item</button>
             </td>
         </tr>
     </table>
