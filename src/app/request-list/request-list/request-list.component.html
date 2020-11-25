@@ -4,7 +4,7 @@
 
 <span> <a routerLink="/request/create">Create</a> </span>
 
-<table class="table table-sm">
+<table class="table table-sm" *ngIf=requests>
     <tr>
         <th>Id</th>
         <th>description</th>
@@ -26,8 +26,8 @@
         <td>{{request.user.username}}</td>
         <td>
             <a routerLink="/request/edit/{{request.id}}">Edit</a> |
-            <a routerLink="/request/detail/{{request.id}}">detail</a>|
-            <a routerLink="/request/lines/{{request.id}}">lines</a>
+            <a routerLink="/request/detail/{{request.id}}">detail</a> |
+            <a routerLink="/request/requestline/{{request.id}}">lines</a>
         </td>
     </tr>
     <a routerLink="/request/create">New Request</a>
