@@ -1,4 +1,3 @@
-import { ɵɵqueryRefresh } from '@angular/core';
 import { Product } from '../../product/product/product.class';
 import { Request } from '../../request/request/request.class';
 
@@ -13,3 +12,4 @@ export class Requestline {
 
     constructor () {}
 }
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestService } from 'src/app/request/request/request.service';
 
 @Component({
   selector: 'app-requestline',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestlineComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private rqtsvc: RequestService
+    private lisvc:
+  ) { }
 
   ngOnInit(): void {
   }
