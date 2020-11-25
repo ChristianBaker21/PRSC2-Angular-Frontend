@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RequestService } from 'src/app/request/request/request.service';
-import { Request } from 'src/app/requestline/requestline/request.class'
-
+import { Request } from 'src/app/requestline/requestline/request.class';
+import { RequestLineService } from 'src/app/requestline/requestline/requestline.service'
 @Component({
   selector: 'app-request-edit',
   templateUrl: './request-edit.component.html',

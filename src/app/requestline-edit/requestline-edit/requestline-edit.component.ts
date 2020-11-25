@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Request } from 'src/app/requestline/requestline/request.class'
 import { RequestService } from 'src/app/request/request/request.service';
 import { Requestline } from 'src/app/requestline/requestline/requestline.class';
-import { RequestLineService } from 'src/app/requestline/requestline/requestline.service.service';
+import { RequestLineService } from 'src/app/requestline/requestline/requestline.service'
 import { SystemService } from 'src/app/system.service';
 
 

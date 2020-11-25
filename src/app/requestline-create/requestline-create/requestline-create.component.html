@@ -1,0 +1,25 @@
+<app-menu></app-menu>
+<router-outlet></router-outlet>
+<h3>RequestLine Create</h3>
+<table class = "table table-sm">
+<tr>
+    <th>Product</th>
+    <td>
+        <select [(ngModel)]=requestline.productid>
+            <option *ngFor="let
+            product of products" [ngValue]=product.id>
+        {{product.name}}</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <th>Quantity</th>
+    <td>
+        <input [(ngModel)]="requestline.quantity" type="number" size="15">
+    </td>
+</tr>
+
+    <td colspan="2">
+        <button (click)="save()" class="btn btn primary">Save</button>
+    </td>
+</table>

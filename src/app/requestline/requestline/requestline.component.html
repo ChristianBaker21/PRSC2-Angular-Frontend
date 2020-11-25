@@ -1,10 +1,8 @@
 <app-menu></app-menu>
+<div>
+<span>RequestLine|</span>
 
-<span>Request List|</span>
-
-<span> <a routerLink="/request/create">Create</a> </span>
-
-<table class="table table-sm">
+<table class="table table-sm" *ngIf=request>
     <tr>
         <th>Id</th>
         <th>description</th>
@@ -15,9 +13,6 @@
     <tr>
         <td>{{request.id}}</td>
         <td>{{request.description}}</td>
-        <td>{{request.justification}}</td>
-        <td>{{request.rejectionreason}}</td>
-        <td>{{request.deliverymode}}</td>
         <td>{{request.status}}</td>
         <td>{{request.total}}</td>
         <td>{{request.user.username}}</td>
@@ -29,12 +24,14 @@
     </tr>
 
 </table>
+</div>
 
-<h2>
-    LineItem Requests
-</h2>
-<div *ngIf=requests>
-    <table class="table" *ngIf=request.requestlines>
+    <span>LineItems</span>
+   
+
+    <span> <a routerLink="/requestline/create">Create</a> </span>
+<div *ngIf=request>
+    <table class="table table-sm">
         <tr>
             <th> LineItemId </th>
             <th>product</th>
@@ -44,15 +41,15 @@
             <th>edit</th>
             <th>delete</th>
         </tr>
-        <tr *ngFor="let lineitem of request.requestlines">
+        <tr *ngFor="let lineitem of request.requestLines">
             <td>{{lineitem.id}}</td>
             <td>{{lineitem.product.name}}</td>
             <td>{{lineitem.quantity}}</td>
-            <td>{{lineitem.line.product.price}}</td>
+            <td>{{lineitem.product.price}}</td>
             <td>{{lineitem.product.price * lineitem.quantity}}</td>
             <td>
                 <button (click)="lineitemEdit(lineitem.id)">Edit</button>
-                <button (click)="DeleteLine(lineitem.id)" id={{lineitem.id}}>Delete Line Item</button>
+                <button (click)="Delete()" id={{lineitem.id}}>Delete Line Item</button>
             </td>
         </tr>
     </table>

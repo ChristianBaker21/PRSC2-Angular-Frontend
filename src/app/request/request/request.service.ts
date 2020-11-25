@@ -27,8 +27,8 @@ export class RequestService {
     change(request: Request): Observable<any> {
       return this.http.put(`${baseurl}/${request.id}`, request) as Observable<any>;
     }
-    remove(request: Request): Observable<any> {
-      return this.http.delete(`${baseurl}/${request.id}`) as Observable<any>;
+    remove(id: number): Observable<any> {
+      return this.http.delete(`${baseurl}/${id}`) as Observable<any>;
     }
     getRequestinReview(id: number): Observable<Request[]> {
       return this.http.get(`${baseurl}/review/${id}`) as Observable<Request[]>;

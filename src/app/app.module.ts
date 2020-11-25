@@ -35,6 +35,7 @@ import { RequestListComponent } from './request-list/request-list/request-list.c
 import { RequestDetailComponent } from './request-detail/request-detail/request-detail.component';
 import { RequestEditComponent } from './request-edit/request-edit/request-edit.component';
 import { RequestReviewComponent } from './Request-Review/request-review/request-review.component';
+import { RequestlineCreateComponent } from './requestline-create/requestline-create/requestline-create.component';
 
 
 
@@ -72,6 +73,7 @@ import { RequestReviewComponent } from './Request-Review/request-review/request-
     RequestDetailComponent,
     RequestEditComponent,
     RequestReviewComponent,
+    RequestlineCreateComponent,
     
 
   ],
