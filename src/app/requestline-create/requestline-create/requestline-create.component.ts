@@ -41,15 +41,15 @@ export class RequestlineCreateComponent implements OnInit {
   }
   
   
-    save(): void{
-      console.log(this.requestline);
-      this.rlsvc.create(this.requestline).subscribe(
-        res => {
-          console.debug("RequestLine Create:", res);
-          this.router.navigateByUrl(`/request/requestline/${this.requestline.requestid}`);
-        },
-        err => {console.error("Error creating request: ", err); }
-        );
+  save(): void{
+    console.log(this.requestline);
+    this.rlsvc.create(this.requestline).subscribe(
+      res => {
+        console.debug("RequestLine Create:", res);
+        this.router.navigateByUrl(`/request/requestline/${this.requestline.requestid}`);
+      },
+      err => {console.error("Error creating request: ", err); }
+      );
   }
 
   

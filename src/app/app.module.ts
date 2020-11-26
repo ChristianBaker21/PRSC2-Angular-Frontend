@@ -26,7 +26,7 @@ import { ProductListComponent } from './product-list/product-list/product-list.c
 import { ProductEditComponent } from './product-edit/product-edit/product-edit.component';
 import { ProductCreateComponent } from './product-create/product-create/product-create.component';
 import { RequestlineDeleteComponent } from './requestline-delete/requestline-delete/requestline-delete.component';
-import { RequestLineEditComponent } from './requestline-edit/requestline-edit/requestline-edit.component'
+import { RequestlineEditComponent } from './requestline-edit/requestline-edit/requestline-edit.component'
 import { RequestlineComponent } from './requestline/requestline/requestline.component';
 import { ProductDetailComponent } from './product-detail/product-detail/product-detail.component';
 import { RequestComponent } from './request/request/request.component';
@@ -63,7 +63,7 @@ import { RequestlineCreateComponent } from './requestline-create/requestline-cre
     ProductListComponent,
     ProductEditComponent,
     ProductCreateComponent,
-    RequestLineEditComponent,
+    RequestlineEditComponent,
     RequestlineDeleteComponent,
     RequestlineComponent,
     ProductDetailComponent,

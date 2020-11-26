@@ -1,12 +1,16 @@
 <p>requestline-edit works!</p>
 <span>Line Edit</span>
-<table class="table" *ngIf=requestline>
+<table class="table table-sm">
     <tr>
-        <td>Product</td>
-        <select [(ngModel)]=requestline.productId>
-            <option *ngFor="let product of products" [ngValue]=product.id>{{product.name}}</option>
+        <th>product</th>
+    <td>
+        <select [(ngModel)]=requestline.productid>
+            <option *ngFor="let
+            product of products" [ngValue]=product.id>
+        {{product.name}}</option>
         </select>
-    </tr>
+    </td>
+</tr>
     <tr>
         <td>quantity</td>
         <input type="number" [(ngModel)]=requestline.quantity>
