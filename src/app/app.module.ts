@@ -36,6 +36,8 @@ import { RequestDetailComponent } from './request-detail/request-detail/request-
 import { RequestEditComponent } from './request-edit/request-edit/request-edit.component';
 import { RequestReviewComponent } from './Request-Review/request-review/request-review.component';
 import { RequestlineCreateComponent } from './requestline-create/requestline-create/requestline-create.component';
+import { RequestReviewListComponent } from './request-review-list/request-review-list/request-review-list.component';
+import { RequestReviewItemComponent } from './request-review-item/request-review-item.component';
 
 
 
@@ -74,6 +76,8 @@ import { RequestlineCreateComponent } from './requestline-create/requestline-cre
     RequestEditComponent,
     RequestReviewComponent,
     RequestlineCreateComponent,
+    RequestReviewListComponent,
+    RequestReviewItemComponent,
     
 
   ],

@@ -5,7 +5,7 @@
 <tr>
     <th>Product</th>
     <td>
-        <select [(ngModel)]=requestline.productid>
+        <select [(ngModel)]=requestline.productId>
             <option *ngFor="let
             product of products" [ngValue]=product.id>
         {{product.name}}</option>

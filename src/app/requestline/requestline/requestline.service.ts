@@ -22,7 +22,7 @@ export class RequestLineService {
     }
 
     getRLine(number: number): Observable<Requestline> {
-      return this.http.get(`{$baseurl}/${number}`) as Observable<Requestline>;
+      return this.http.get(`${baseurl}/${number}`) as Observable<Requestline>;
     }
     
 
@@ -37,11 +37,11 @@ export class RequestLineService {
     
 
     change(requestline:Requestline): Observable<any> {
-      return this.http.put(`{$baseurl}/${requestline.id}`, requestline) as Observable<Requestline>;
+      return this.http.put(`${baseurl}/${requestline.id}`, requestline) as Observable<Requestline>;
     }
     
 
     remove(number: number): Observable<Requestline> {
-      return this.http.delete(`{$baseurl}/${number}`) as Observable<Requestline>;
+      return this.http.delete(`${baseurl}/${number}`) as Observable<Requestline>;
     }
   }

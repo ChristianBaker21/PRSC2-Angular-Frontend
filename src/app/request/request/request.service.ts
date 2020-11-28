@@ -34,13 +34,13 @@ export class RequestService {
       return this.http.get(`${baseurl}/review/${id}`) as Observable<Request[]>;
     }
     reviewRequest(request: Request): Observable<any> {
-      return this.http.put(`${baseurl}/ReviewRequest/${request.id}`, request) as Observable<any>;
+      return this.http.put(`${baseurl}/ReviewRequest`, request) as Observable<any>;
     }
     approveRequest(request: Request): Observable<any> {
-      return this.http.put(`${baseurl}/ApproveRequest/${request.id}`, request) as Observable<any>;
+      return this.http.put(`${baseurl}/ApproveRequest`, request) as Observable<any>;
     }
     rejectRequest(request: Request): Observable<any> {
-      return this.http.put(`${baseurl}/RejectRequest/${request.id}`, request) as Observable<any>;
+      return this.http.put(`${baseurl}/RejectRequest`, request) as Observable<any>;
     }
     
     

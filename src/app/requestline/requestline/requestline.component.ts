@@ -53,7 +53,15 @@ export class RequestlineComponent implements OnInit {
            );
            //populate requestlines with lines for this request
       }
-    
+    SetToReview(): void{
+      this.rqstsvc.reviewRequest(this.request).subscribe(
+        res => {
+          console.log( res );
+          this.refresh();
+        },
+        err => {console.error(err)}
+      );
+    }
   }
 //review() : void{
   //this.rqstsvc.reviewRequest(this.request).subscribe(

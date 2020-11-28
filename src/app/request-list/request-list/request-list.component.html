@@ -4,7 +4,7 @@
 
 <span> <a routerLink="/request/create">Create</a> </span>
 
-<table class="table table-sm" *ngIf=requests>
+<table class="table table-sm">
     <tr>
         <th>Id</th>
         <th>description</th>
@@ -30,6 +30,6 @@
             <a routerLink="/request/requestline/{{request.id}}">lines</a>
         </td>
     </tr>
-    <a routerLink="/request/create">New Request</a>
+        <a routerLink="/request/create">New Request</a>
 </table>
-<a routerLink="/request/create">New Request</a>
+

@@ -48,10 +48,11 @@
             <td>{{lineitem.quantity}}</td>
             <td>{{lineitem.product.price}}</td>
             <td>{{lineitem.product.price * lineitem.quantity}}</td>
-            <td>
-                <a routerLink="/requestline/edit/{{lineitem.id}}">Edit</a>
-                
-            </td>
+        </tr>
+        <tr>
+            <button (click)="approve()">approve</button>
+            <button (click)="reject()">reject</button>
+            <input tyoe="text" [(ngModel)]="request.rejectionreason">
         </tr>
     </table>
 </div>

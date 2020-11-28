@@ -4,16 +4,17 @@
     <tr>
         <th>product</th>
     <td>
-        <select [(ngModel)]=requestline.productid>
+        <select [(ngModel)]="requestline.productId">
             <option *ngFor="let
             product of products" [ngValue]=product.id>
         {{product.name}}</option>
         </select>
     </td>
-</tr>
     <tr>
-        <td>quantity</td>
-        <input type="number" [(ngModel)]=requestline.quantity>
+        <th>quantity</th>
+        <td>
+            <input [(ngModel)]="requestline.quantity" type="number" size="15">
+        </td>
     </tr>
     <td colspan="2">
         <button (click)="save()" class="btn btn primary">Save</button>

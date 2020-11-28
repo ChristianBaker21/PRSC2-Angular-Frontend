@@ -14,6 +14,8 @@ import { User } from 'src/app/user/user.class';
 export class RequestListComponent implements OnInit {
 
   requests: Request[] = [];
+  users: User[]
+  user: User;
 
   constructor(
     private rqstsvc: RequestService,
@@ -24,27 +26,22 @@ export class RequestListComponent implements OnInit {
 
   ) { }
 
-  users: User[]
-  user: User;
 
   ngOnInit(): void {
     this.rqstsvc.list().subscribe(
-       res => { console.log(res),
-       this.requests = res as Request[]},
-      err => {console.error(err)}
-       );
-        this.usersvc.list().subscribe(
-           res => { console.log(res),
-           this.users = res;
-          },
-          err => {console.error(err); }
-           );
-           this.user = this.syssvc.loggedInUser;
-        
+      res => {
+        console.log(res);
+        this.requests = res as Request[];
+      },
+      err => { console.error(err) }
+    );
 
-    
-  }
+    this.user = this.syssvc.loggedInUser;
+
+
 
   }
+
+}
 
 

@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<div>
+<span>RequestLine Review|</span>
+
+<table class="table table-sm">
+    <tr>
+        <th>Id</th>
+        <th>description</th>
+        <th>status</th>
+        <th>total</th>
+        <th>user</th>
+    </tr>
+    <tr *ngFor= "let request of requests">
+
+        <td>{{request.id}}</td>
+        <td>{{request.description}}</td>
+        <td>{{request.status}}</td>
+        <td>{{request.total}}</td>
+        <td>{{request.user.username}}</td>
+        <td>
+        </td>
+            
+        
+    </tr>
+
+</table>

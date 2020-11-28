@@ -1,4 +1,5 @@
 import { User } from 'src/app/user/user.class';
+import { Requestline } from './requestline.class';
 
 export class Request {
     id: number = 0;
@@ -11,6 +12,7 @@ export class Request {
 
     userid: number = 0;
     user: User = null;
+    requestLines: Requestline = null;
     
     
     constructor () {

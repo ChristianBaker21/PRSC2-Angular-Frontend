@@ -37,7 +37,7 @@ export class RequestlineCreateComponent implements OnInit {
         console.error(err);
       }
     )
-    this.requestline.requestid = +id;
+    this.requestline.requestId = +id;
   }
   
   
@@ -46,7 +46,7 @@ export class RequestlineCreateComponent implements OnInit {
     this.rlsvc.create(this.requestline).subscribe(
       res => {
         console.debug("RequestLine Create:", res);
-        this.router.navigateByUrl(`/request/requestline/${this.requestline.requestid}`);
+        this.router.navigateByUrl(`/request/requestline/${this.requestline.requestId}`);
       },
       err => {console.error("Error creating request: ", err); }
       );

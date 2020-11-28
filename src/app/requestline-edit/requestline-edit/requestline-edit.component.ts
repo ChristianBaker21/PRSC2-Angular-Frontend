@@ -28,6 +28,15 @@ export class RequestlineEditComponent implements OnInit {
   ngOnInit(): void {
    
     let id = +this.route.snapshot.params.id;
+    this.rlsvc.getRLine(id).subscribe(
+      res => {
+        console.log(res);
+        this.requestline = res;
+      },
+      err => {
+        console.error(err);
+      }
+    )
     this.productsvc.list().subscribe(
       res => {
         console.log(res);
@@ -36,8 +45,9 @@ export class RequestlineEditComponent implements OnInit {
       err => {
         console.error(err);
       }
+    
     )
-    this.requestline.requestid = +id;
+    this.requestline.requestId = +id;
   }
   
   
@@ -46,7 +56,7 @@ export class RequestlineEditComponent implements OnInit {
     this.rlsvc.change(this.requestline).subscribe(
       res => {
         console.debug("RequestLine Change:", res);
-        this.router.navigateByUrl(`/request/requestline/${this.requestline.requestid}`);
+        this.router.navigateByUrl(`/request/requestline/${this.requestline.requestId}`);
       },
       err => {console.error("Error Change request: ", err); }
       );
