@@ -17,33 +17,43 @@ export class RequestReviewItemComponent implements OnInit {
     private router: Router,
   ) { }
 
-request: Request;
+  request: Request;
 
 
 
-  ngOnInit(): void {  
+  ngOnInit(): void {
     this.refresh();
   }
 
-  refresh(): void{
+  refresh(): void {
     let id = this.route.snapshot.params.id;
-    this.rqstsvc.getRequestinReview(id).subscribe()
-      res =>{console.debug(res);
-      err =>{ console.error(err);}
-    
+    this.rqstsvc.get(id).subscribe(
+      res => { this.request = res; console.log("Request:", this.request);  },
+      err => { console.error(err); }
+    );
+  }
+
+  approveRequest(): void {
+    this.rqstsvc.approveRequest(this.request).subscribe(
+      res => {
+        console.log(res);
+        this.router.navigateByUrl("request/reviewlist");
+      },
+      err => { console.log(err) }
+    )
+  }
+  rejectRequest(): void {
+    this.rqstsvc.rejectRequest(this.request).subscribe(
+      res => {
+        console.log(res);
+        this.router.navigateByUrl("request/reviewlist")
+      },
+      err => { console.log(err)}
+    )
+  }
+  save(): void {
+    this.router.navigateByUrl("request/list")
   }
 }
-approveRequest(): void{
-  this.rqstsvc.approveRequest(this.request).subscribe(
-    res => {
-      console.log(res);
-      this.router.navigateByUrl("request/reviewlist");},
-      err => {console.log(err)}
-  )
-}
-save(): void{
-  this.router.navigateByUrl("request/list")
-}
-  }
 
 

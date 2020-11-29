@@ -2,7 +2,7 @@
 <div>
 <span>RequestLine|</span>
 
-<table class="table table-sm" *ngIf=request>
+<table class="table table-sm" *ngIf="request">
     <tr>
         <th>Id</th>
         <th>description</th>
@@ -31,7 +31,7 @@
    
 
     <span> <a routerLink="/requestline/create/{{request.id}}">Create</a> </span>
-<div *ngIf=request>
+<div *ngIf="request">
     <table class="table table-sm">
         <tr>
             <th> LineItemId </th>
@@ -50,8 +50,8 @@
             <td>{{lineitem.product.price * lineitem.quantity}}</td>
         </tr>
         <tr>
-            <button (click)="approve()">approve</button>
-            <button (click)="reject()">reject</button>
+            <button (click)="approveRequest()">approve</button>
+            <button (click)="rejectRequest()">reject</button>
             <input tyoe="text" [(ngModel)]="request.rejectionreason">
         </tr>
     </table>

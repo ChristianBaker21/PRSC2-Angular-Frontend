@@ -24,7 +24,8 @@ export class RequestlineComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private usersvc: UserService,
-    private syssvc: SystemService
+    private syssvc: SystemService,
+    private rlsvc: RequestLineService
     
     ) { }
     
@@ -33,9 +34,9 @@ export class RequestlineComponent implements OnInit {
       this.refresh();
     }
 
-    delete(id: number): void {
+    remove(id: number): void {
       console.debug(`Deleting line id ${id}`);
-      this.rqstsvc.remove(id).subscribe(
+      this.rlsvc.remove(id).subscribe(
         res => { this.refresh(); },
         err => { console.error(err);}
       );
